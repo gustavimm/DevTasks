@@ -1,0 +1,11 @@
+.task-text{
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.task-text.done{
+    text-decoration: line-through;
+    transition: all 0.3s ease-in-out;
+    color: var(--text-gray) ;
+    opacity: 0.6;
+}
