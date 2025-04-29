@@ -1,0 +1,24 @@
+/* Centraliza o container e reduz o tamanho dele */
+.container {
+    width: 100%; /* Ajuste o tamanho conforme necessário */
+    max-width: 1200px; /* Define um limite máximo de largura */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 20px; /* Adiciona espaçamento interno */
+    box-sizing: border-box; /* Inclui padding no cálculo do tamanho */
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 2.5rem; /* Tamanho da fonte do título */
+}
+
+#task-form{
+    width: 100%; /* Ajuste o tamanho conforme necessário */
+    max-width: 800px; /* Define um limite máximo de largura */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 20px; /* Adiciona espaçamento interno */
+    box-sizing: border-box; /* Inclui padding no cálculo do tamanho */
+    
+}

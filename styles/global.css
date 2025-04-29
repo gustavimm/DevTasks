@@ -1,0 +1,27 @@
+:root{
+    --text-btn-white : #ffffff;
+    --primary-color: #4CAF50;   /* Cor principal */
+    --secondary-color: #ff9800; /* Cor secundária */
+    --background-color: #f4f4f4; /* Cor de fundo */
+    --text-color: #333;         /* Cor do texto */
+    --button-bg: #007bff;       /* Cor do botão */
+    --button-hover-bg: #0056b3; /* Cor do botão ao passar o mouse */
+    --text-grey : #ccc ;
+    --border-radius: 8px;       /* Bordas arredondadas */
+    --transition-speed: 0.3s;   /* Velocidade das transições */
+    --font-stack: "Montserrat", sans-serif;
+}
+
+
+*{
+    font-family: var(--font-stack);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: var(--font-stack);
+    background-color: var(--background-color);
+}
