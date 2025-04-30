@@ -63,3 +63,32 @@ button.remove-btn:hover{
     transform: scale(1.5);
 }
 
+#filter-buttons{
+    margin: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+#filter-buttons button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--button-bg);
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+#filter-buttons button:hover{
+    background-color: var(--button-hover-bg);
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
+}
+
+#filter-buttons button:active{
+    transform: scale(0.9);
+}
+

@@ -8,7 +8,6 @@
     --button-hover-bg: #0056b3; /* Cor do botão ao passar o mouse */
     --text-grey : #ccc ;
     --border-radius: 8px;       /* Bordas arredondadas */
-    --transition-speed: 0.3s;   /* Velocidade das transições */
     --font-stack: "Montserrat", sans-serif;
 }
 

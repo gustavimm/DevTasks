@@ -2,6 +2,7 @@
 const form = document.getElementById('task-form');
 const taskInput = document.getElementById('task-input');
 const taskList = document.getElementById('task-list');
+const filterButtons = document.querySelectorAll('#filter-buttons button');
 
 
 //Função que cria um novo item na lista
@@ -67,6 +68,4 @@ form.addEventListener ('submit', function(event){
     }
 });
 
-
-
- 
+//Função para filtrar as tarefas
