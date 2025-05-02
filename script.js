@@ -19,6 +19,24 @@ const removeButton = document.createElement('button');
 removeButton.textContent = ' ❌ '
 removeButton.classList.add('remove-btn');
 
+//Adiciona ou remove a classe de prioridade
+
+const priorityButton = document.createElement('button');
+priorityButton.textContent = '⭐️';
+priorityButton.classList.add('priority-btn');
+
+li.appendChild(priorityButton); //Adiciona o botão de prioridade ao item da lista
+
+priorityButton.addEventListener('click', () => {
+    li.classList.toggle('priority'); //Adicionando ou removendo prioridade
+    if (li.classList.contains('priority')) {
+        taskList.prepend(li); //Move para o topo da lista
+    }
+    
+});
+
+console.log(priorityButton); // Verifica se o botão existe
+
 
 // Ao clicar no texto, marca/desmarca como tarefa concluída
 taskText.addEventListener('click', function (){
@@ -66,7 +84,18 @@ filterButtons.forEach(button => {
             const filter = button.getAttribute('data-filter');
             const tasks = document.querySelectorAll('.task-item');
 
-            tasks.forEach
+            tasks.forEach(task => {
+                const isDone = task.querySelector('span').classList.contains('done');
+                task.classList.remove('hidden')
+
+               if (filter === 'completed' && !isDone) {
+                    task.classList.add('hidden');
+                 
+                    
+                } else if (filter === 'pending' && isDone) {
+                    task.classList.add('hidden')
+                }
+            })
         })
+
 })
- 
