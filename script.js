@@ -34,11 +34,6 @@ removeButton.addEventListener('click', function(){
 });
 
 
-//Adiciona a tarefa e o botão no li
-
-li.appendChild(taskText);
-li.appendChild(removeButton);
-
 taskList.appendChild(li);
 
 //Adiciona o evento de remover a tarefa ao botão
@@ -48,10 +43,6 @@ removeButton.addEventListener('click', function() {
 });
 
 }
-
-
-
-
 
 
 //Escutando o envio do Formulário
@@ -68,4 +59,14 @@ form.addEventListener ('submit', function(event){
     }
 });
 
-//Função para filtrar as tarefas
+//Função para filtrar as tarefas    
+
+filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
+            const tasks = document.querySelectorAll('.task-item');
+
+            tasks.forEach
+        })
+})
+ 
