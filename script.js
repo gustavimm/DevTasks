@@ -99,3 +99,23 @@ filterButtons.forEach(button => {
         })
 
 })
+
+//Função para reorganizar a lista, mantendo tarefas prioritárias no topo
+
+function updateTaskOrder (){
+    const tasks = Array.from(document.querySelectorAll('.task-item'));
+
+    tasks.sort((a, b) => {
+        return b.classList.contains('priority') - a.classList.contains('priority');
+    });
+    tasks.forEach(task => taskList.appendChild(task)); //Reordena na lista.
+
+}
+
+//Dentro da função addTask(), chamamos updateTaskOrder() ao clicar no botão de prioridade :
+
+priorityButton.addEventListener('click', () =>{
+    li.classList.toggle('priority')
+    updateTaskOrder(); //Chama a função para reorganizar após definir prioridade
+})
+
