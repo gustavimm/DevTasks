@@ -32,10 +32,9 @@ priorityButton.addEventListener('click', () => {
     if (li.classList.contains('priority')) {
         taskList.prepend(li); //Move para o topo da lista
     }
+    updateTaskOrder(); //Chama a função para atualizar a ordem das tarefas
     
 });
-
-console.log(priorityButton); // Verifica se o botão existe
 
 
 // Ao clicar no texto, marca/desmarca como tarefa concluída
@@ -45,11 +44,6 @@ taskText.addEventListener('click', function (){
 
 li.appendChild(taskText);
 li.appendChild(removeButton);
-taskList.appendChild(li);
-
-removeButton.addEventListener('click', function(){
-    li.remove();
-});
 
 
 taskList.appendChild(li);
@@ -73,6 +67,7 @@ form.addEventListener ('submit', function(event){
 
     if (taskText !== '') {
         addTask(taskText); //Adiciona na Lista
+        showSuccessMessage(); //Chama a função para mostrar a mensagem de sucesso
         taskInput.value = ''; //Limpa o Input
     }
 });
@@ -114,8 +109,13 @@ function updateTaskOrder (){
 
 //Dentro da função addTask(), chamamos updateTaskOrder() ao clicar no botão de prioridade :
 
-priorityButton.addEventListener('click', () =>{
-    li.classList.toggle('priority')
-    updateTaskOrder(); //Chama a função para reorganizar após definir prioridade
-})
+function showSuccessMessage() {
+        const message = document.getElementById('success-message');
+        message.classList.remove('hidden'); //Remove a classe 'hidden' para mostrar a mensagem
+        message.classList.add('visible'); //Adiciona a classe 'visible' para exibir a mensagem
 
+        setTimeout(() => {
+            message.classList.remove('visible'); //Remove a classe 'visible' para esconder a mensagem
+            message.classList.add('hidden'); //Adiciona a classe 'hidden' para esconder a mensagem
+        }, 2000); // Tempo em milissegundos (2 segundos)
+    }
